@@ -30,31 +30,31 @@ public class ProdutoResource {
 	ProdutoRepository produtoRepository;
 	
 	@GetMapping("/produtos")
-	@ApiOperation(value="Retorna a lista de todos os produtos.")
+	@ApiOperation(value="Return a list of all products.")
 	public List<Produto> listaProdutos(){
 		return produtoRepository.findAll();
 	}
 	
 	@GetMapping("/produto/{id}")
-	@ApiOperation(value="Retorna um produto específico da lista de compras")
+	@ApiOperation(value="Return a specific product from the list")
 	public Produto listaProdutoPeloId(@PathVariable(value="id") long id){
 		return produtoRepository.findById(id);
 	}
 	
 	@PostMapping("/produto")
-	@ApiOperation(value="Salva um produto na lista de compras")
+	@ApiOperation(value="Save a product in the list")
 	public Produto salvaProduto(@RequestBody Produto produto){
 		return produtoRepository.save(produto);
 	}
 	
 	@DeleteMapping("/produto/{id}")
-	@ApiOperation(value="Delete um produto da lista de compras")
+	@ApiOperation(value="Delete a product from the list")
 	public void deletaProduto(@PathVariable(value="id") long id){
 		produtoRepository.deleteById(id);
 	}
 	
 	@PutMapping("/produto")
-	@ApiOperation(value="Atualiza um produto da lista de compras")
+	@ApiOperation(value="Update a product from the list ")
 	public Produto atualizaProduto(@RequestBody Produto produto){
 		return produtoRepository.save(produto);
 	}
