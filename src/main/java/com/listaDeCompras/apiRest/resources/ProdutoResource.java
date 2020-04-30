@@ -21,13 +21,19 @@ import io.swagger.annotations.ApiOperation;
 import com.listaDeCompras.apiRest.models.Produto;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value="/")
 @Api(value="Lista de Compras API REST")
 @CrossOrigin(origins="*")
 public class ProdutoResource {
 	
 	@Autowired
 	ProdutoRepository produtoRepository;
+	
+	@GetMapping("/")
+	@ApiOperation(value="HomePage")
+	public String homePage(){
+		return "Welcome to this Shopping Lis API";
+	}
 	
 	@GetMapping("/produtos")
 	@ApiOperation(value="Return a list of all products.")
