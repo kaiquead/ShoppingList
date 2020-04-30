@@ -30,8 +30,8 @@ public class SwaggerConfig {
 	
 	private ApiInfo metaInfo(){
 		ApiInfo apiInfo = new ApiInfo(
-				"Lista de Compras API REST",
-				"API REST de cadastro de lista de compras.",
+				"Shopping List API REST",
+				"Practicing Java, Spring boot, Maven and PostgreSQL. Simple API to create a Shopping List.",
 				"1.0",
 				"Terms of Service",
 				new Contact("Kaique Alves", "https://github.com/kaiquead", "kaiquead13@gmail.com"),
