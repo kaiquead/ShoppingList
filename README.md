@@ -15,11 +15,11 @@ You can see the Swagger's Documentation in:
 - Route: '/ '
 - HTTP Method: GET
 
-### All products:
+### Get All products:
 - Route: /produtos
 - HTTP Method: GET  
 
-Example:
+Example of return:
 ```
 [
   {
@@ -30,12 +30,17 @@ Example:
   }
 ]
 ```
+- Status Code:  
+200 > OK  
+401 > Unauthorized  
+403 > Forbidden  
+404 > Not Found
 
-### Specific product:
+### Get Specific product:
 - URL: /produto/{id}
 - HTTP Method: GET
 
-Example:
+Example of return:
 ```
 [
   {
@@ -46,5 +51,54 @@ Example:
   }
 ]
 ```
+- Status Code:  
+200 > OK  
+401 > Unauthorized  
+403 > Forbidden  
+404 > Not Found
 
-In editin......
+### Insert a product:
+- URL: /produto
+- HTTP Method: POST
+- Body:
+```
+{
+  "nome": "Coca",
+  "quantidade": 1,
+  "valor": 5
+}
+```
+- Status Code:  
+200 > OK  
+201 > Created  
+401 > Unauthorized  
+403 > Forbidden  
+404 > Not Found
+
+## Edit a product:
+- URL: /produto
+- HTTP Method: PUT
+- Body:
+```
+{
+  "id": 2,
+  "nome": "Coca",
+  "quantidade": 10,
+  "valor": 5
+}
+```
+- Status Code:  
+200 > OK  
+201 > Created  
+401 > Unauthorized  
+403 > Forbidden  
+404 > Not Found
+
+## Delete a product:
+- URL: /produto/{id}
+- HTTP Method: DELETE
+- Status Code:  
+200 > OK  
+204 > No Content  
+401 > Unauthorized  
+403 > Forbidden
