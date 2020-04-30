@@ -22,7 +22,7 @@ import com.listaDeCompras.apiRest.models.Produto;
 
 @RestController
 @RequestMapping(value="/")
-@Api(value="Lista de Compras API REST")
+@Api(value="Shopping List API REST")
 @CrossOrigin(origins="*")
 public class ProdutoResource {
 	
